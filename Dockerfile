@@ -6,13 +6,15 @@ RUN apt-get update && \
     gcc \
     libxml2-dev \
     libxslt-dev \
+    ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
 # Copy requirements and install dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --trusted-host pypi.org --trusted-host files.pythonhosted.org -r requirements.txt || \
+    pip install --no-cache-dir -r requirements.txt
 
 # Copy application source
 COPY app.py .
