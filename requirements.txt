@@ -1,7 +1,7 @@
-BeautifulSoup4
-tld
-termcolor
-langdetect
-requests
-lxml
-galeodes
+beautifulsoup4>=4.11.0,<5.0.0
+tld>=0.12.0,<1.0.0
+termcolor>=2.0.0,<3.0.0
+langdetect>=1.0.9,<2.0.0
+requests>=2.28.0,<3.0.0
+lxml>=4.9.0,<6.0.0
+galeodes>=0.0.1,<1.0.0
