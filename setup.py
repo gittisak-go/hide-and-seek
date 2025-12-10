@@ -25,7 +25,7 @@ setup(
         'social_analyzer': ['data/*'],
     },
     install_requires=requirements,
-    python_requires='>=3.9',
+    python_requires='>=3.10',
     entry_points={
         'console_scripts': [
             'social-analyzer=social_analyzer.app:main',
@@ -36,7 +36,6 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: GNU Affero General Public License v3',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
         'Programming Language :: Python :: 3.11',
     ],

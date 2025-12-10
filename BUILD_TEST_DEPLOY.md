@@ -15,8 +15,8 @@ This document provides instructions for building, testing, and deploying the soc
 
 ```bash
 # Clone the repository
-git clone https://github.com/gittisak-go/hide-and-seek.git
-cd hide-and-seek
+git clone https://github.com/qeeqbox/social-analyzer.git
+cd social-analyzer
 
 # Install dependencies
 pip install -r requirements.txt
@@ -199,4 +199,4 @@ This project is licensed under AGPL-3.0. See the LICENSE file for details.
 ## Support
 
 For issues, questions, or contributions, please visit:
-https://github.com/gittisak-go/hide-and-seek
+https://github.com/qeeqbox/social-analyzer
