@@ -1,0 +1,5 @@
+include README.rst
+include README.md
+include LICENSE
+include requirements.txt
+recursive-include social_analyzer/data *
