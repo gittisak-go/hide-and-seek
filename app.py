@@ -908,5 +908,16 @@ def main_logic():
     sa.run_as_cli()
 
 
+# Module-level app instance for WSGI servers
+app = None
+
+
+def main():
+    """Main entry point for console script."""
+    analyzer = SocialAnalyzer(silent=False)
+    analyzer.run_as_cli()
+
+
+
 if __name__ == "__main__":
     main_logic()
