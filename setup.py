@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from setuptools import setup, find_packages
+from setuptools import setup
 
 with open('README.rst', 'r', encoding='utf-8') as fh:
     long_description = fh.read()
@@ -16,7 +16,7 @@ setup(
     version='0.45',
     license='AGPL-3.0',
     url='https://github.com/qeeqbox/social-analyzer',
-    packages=find_packages(exclude=['tests', 'test', 'docs']),
+    py_modules=['app'],
     include_package_data=True,
     entry_points={
         'console_scripts': [
