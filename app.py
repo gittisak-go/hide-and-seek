@@ -904,8 +904,19 @@ class SocialAnalyzer():
 
 
 def main_logic():
+    """Legacy main logic - creates analyzer and runs CLI."""
     sa = SocialAnalyzer()
     sa.run_as_cli()
+
+
+def main():
+    """
+    Main entry point for console_scripts.
+    Creates a SocialAnalyzer instance and runs the CLI.
+    """
+    sa = SocialAnalyzer(silent=False)
+    sa.run_as_cli()
+    return sa
 
 
 if __name__ == "__main__":
