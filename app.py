@@ -908,5 +908,14 @@ def main_logic():
     sa.run_as_cli()
 
 
+def main():
+    """
+    Main entry point for console_scripts.
+    Returns a SocialAnalyzer instance for testing/scripting.
+    """
+    sa = SocialAnalyzer(silent=False)
+    return sa
+
+
 if __name__ == "__main__":
     main_logic()
