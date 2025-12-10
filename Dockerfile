@@ -1,10 +1,26 @@
-FROM node:18.15.0-alpine3.17
-WORKDIR /usr/src/app
-COPY . .
-RUN apk update && \
-  apk add --no-cache firefox-esr && \
-  npm ci && \
-  npm install lodash && \
-  npm install --loglevel=error
-EXPOSE 9005
-ENTRYPOINT [ "npm", "start", "--","--docker"]
+FROM python:3.11-slim
+
+# Install system dependencies for lxml
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    gcc \
+    libxml2-dev \
+    libxslt-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Copy requirements and install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application source
+COPY app.py .
+COPY data/ ./data/
+
+# Expose port 8000
+EXPOSE 8000
+
+# Default command
+CMD ["python", "app.py"]
+
