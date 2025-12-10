@@ -915,7 +915,8 @@ app = None
 def main():
     """Main entry point for console script."""
     analyzer = SocialAnalyzer(silent=False)
-    return analyzer
+    analyzer.run_as_cli()
+
 
 
 if __name__ == "__main__":

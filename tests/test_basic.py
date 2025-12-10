@@ -1,5 +1,5 @@
 """
-Basic unit tests for social-analyzer.
+Basic unit tests for hide-and-seek SocialAnalyzer.
 
 These tests avoid network operations by using silent=True.
 """
